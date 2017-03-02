@@ -105,15 +105,31 @@ header
         .one
             position: absolute
             left: 250px
-            animation: loadAnimation 900ms ease-in-out 0s infinite alternate
+            animation: loadAnimation1 1s ease-in-out 0s infinite alternate
         .two
             position: absolute
             left: 270px
-            animation: loadAnimation 600ms ease-in-out 300ms infinite alternate
-        
+            animation: loadAnimation2 1s ease-in-out 0s infinite alternate
+        .three
+            position: absolute
+            left: 290px
+            animation: loadAnimation3 1s ease-in-out 0s infinite alternate
 
-@keyframes loadAnimation
-    from
+
+@keyframes loadAnimation1
+    0%
         opacity: 0
-    to
+    20%, 100%
+        opacity: 1
+
+@keyframes loadAnimation2
+    0%
+        opacity: 0
+    33.3%, 100%
+        opacity: 1
+
+@keyframes loadAnimation3
+    0%
+        opacity: 0
+    66.6%, 100%
         opacity: 1
