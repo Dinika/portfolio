@@ -90,7 +90,30 @@ header
         width: 70%
         background: $headerAccent
         color: $headerGray
-        padding: 10px
+        padding: 10px 10px 30px 10px
 
         a
             color: $headerGray
+
+        .loadCircle
+            display: inline-block
+            height: 10px
+            width: 10px
+            background-color: $headerDarkGray
+            border-radius: 50%
+            margin: 10px
+        .one
+            position: absolute
+            left: 250px
+            animation: loadAnimation 900ms ease-in-out 0s infinite alternate
+        .two
+            position: absolute
+            left: 270px
+            animation: loadAnimation 600ms ease-in-out 300ms infinite alternate
+        
+
+@keyframes loadAnimation
+    from
+        opacity: 0
+    to
+        opacity: 1
