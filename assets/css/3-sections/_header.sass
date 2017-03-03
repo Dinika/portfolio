@@ -211,10 +211,17 @@ header
     \:root
         font-size: 2.5px
 
-@media screen and (max-width: 592px)
+@media screen and (max-width: 434px)
+    *
+        transition: all 300ms ease-in-out
     header
         .bar2
             width: 65%
+        .hero
+            top: 30%
+            
+            h1, h1 span
+                font-size: 12rem
 
 @keyframes headerAnimation
     from
