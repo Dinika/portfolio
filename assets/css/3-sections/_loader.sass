@@ -9,7 +9,44 @@
 
     .spinner
         color: white
-        width: 100px
-        height: 24px
         margin: 300px auto
         font-size: 14px
+        width: 100px
+        height: 100px
+        background: $headerDarkGray
+        border-radius: 50%
+        position: relative
+
+        &:after, &:before
+            content: ''
+            display: block
+            width: 100px
+            height: 100px
+            border-radius: 50%
+
+    .innerSpinner:after
+        position: absolute
+        top: -4px
+        left: -4px
+        border: 4px solid transparent
+        border-top-color: $headerAccent
+        border-bottom-color: $headerAccent
+        animation: spinny 1s linear infinite
+
+    .loadText
+        color: $headerDarkGray
+        display: inline-block
+        width: 150px
+        margin: auto
+        position: absolute
+        top: 450px
+        left: 48%
+        font-size: 14px
+
+@keyframes spinny
+    0%
+        transform: rotate(0deg) scale(1)
+    50%
+        transform: rotate(45deg) scale(1.5)
+    100%
+        transform: rotate(360deg) scale(1)
