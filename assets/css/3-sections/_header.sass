@@ -6,7 +6,7 @@
 
 header
     position: relative
-    background-color: $headerBgColor
+    background-color: $bgColor
     height: 100vh
     width: 100vw
 
@@ -17,75 +17,52 @@ header
         right: 12.5rem
         width: 2.5em
         height: 2.5em
-        background: rgba(127, 127, 127, 1)
+        background: $headerAccent
         margin-right: 1em
         font-family: Lato, Courier New
         font-size: 10rem
         font-weight: 900
-        color: rgba(191, 191, 191, 1)
+        color: $logoText
         align-items: center
         justify-content: center
         border-radius: 50%
-
-    .headerBar
-        display: inline-block
-        position: absolute
-        left: 0px
-        height: 5rem
-        animation: headerAnimation 1s ease-in-out 0s 1 normal forwards
-
-    .bar1
-        width: 30%
-        background-color: $headerAccent
-        margin-top: 4rem
-
-    .bar2
-        width: 75%
-        background-color: $headerGray
-        margin-top: 13rem
-
-    .bar3
-        width: 52%
-        background-color: $headerAccent
-        margin-top: 22rem
 
 
     .hero
         font-size: 4rem
         position: relative
-        top: 35%
+        top: 25%
         width: 50vw
-        margin: auto
+        margin-left: 20%
+        margin-right: auto
         padding-left: 4.375em
         padding-bottom: 0.25em
 
         h2
             font-size: 8rem
             font-weight: 300
-            color: $headerGray
+            color: $headerBody
             margin-top: 0.125em
         h1
-            font-family: 'Prata', 'Times New Roman'
             font-size: 22rem
-            font-weight: 400
-            color: $headerGray
-            margin-top: 0.2272em
+            font-weight: 900
+            color: $headerTitle
+            margin-top: 0.05em
 
             span
-                font-family: 'Prata', 'Times New Roman'
                 font-size: 22rem
-                font-weight: 400
-                color: $headerAccent
-                margin-top: 20px
+                font-weight: 900
+                color: $headerTitle
+                margin-top: 0.05em
 
         p
             font-size: 4.5rem
             font-weight: 400
-            color: $headerGray
+            color: $headerBody
             width: 79%
             padding-top: 1em
-            padding-bottom: 1.5em
-            padding-left: 1em
+            padding-bottom: 1.2em
+            padding-left: 0.5em
             border-left: 0.0625em dashed $headerAccent
 
             span
@@ -93,15 +70,15 @@ header
 
         .waitMessage
             font-size: 4rem
-            margin-top: 3em
+            margin-top: 1em
             margin-bottom: 0.75em
             width: 70%
-            background: $headerAccent
-            color: $headerGray
+            background: rgb(242, 242, 242)
+            color: $headerBody
             padding: 0.625em
 
             a
-                color: $headerGray
+                color: $headerAccent
             .loader
                 width: 6.25em
                 margin-left: auto
@@ -111,9 +88,9 @@ header
                     display: inline-block
                     height: 0.625em
                     width: 0.625em
-                    background-color: $headerGray
+                    background-color: $headerAccent
                     border-radius: 50%
-                    margin: 10px
+                    margin: 2rem
                 .one
                     animation: loadAnimation1 1s ease-in-out 0s infinite alternate
                 .two
@@ -121,6 +98,19 @@ header
                 .three
                     animation: loadAnimation3 1s ease-in-out 0s infinite alternate
 
+    .arrow
+        display: flex
+        position: absolute
+        width: 100%
+        margin: auto
+        justify-content: center
+        bottom: 2%
+        animation: arrowAnimation 500ms ease-in-out infinite alternate
+
+        #i-chevron-bottom
+            stroke-width: 7.8125%
+            stroke: $headerAccent
+
 @media screen and (max-width: 1227px)
     \:root
         font-size: 3.5px
@@ -132,20 +122,10 @@ header
         .hero
             p
                 font-size: 16px
+        .waitMessage
+            .loader
+                width: 5em
 
-
-
-@media screen and (max-width: 1227px)
-    \:root
-        font-size: 3.5px
-    *
-        transition: all 300ms ease-in-out
-    header
-        height: 100vh
-
-        .hero
-            p
-                font-size: 16px
 
 @media screen and (max-width: 1072px)
     \:root
@@ -166,6 +146,7 @@ header
     header
         .hero
             width: 60%
+            top: 20%
 
         .hero
             h1, h1 span
@@ -174,13 +155,7 @@ header
                 font-size: 6rem
                 font-weight: 400
 
-@media screen and (max-width: 672px)
-    *
-        transition: all 300ms ease-in-out
-    header
-        .hero
-            h1, h1 span
-                font-size: 18rem
+
 
 @media screen and (max-width: 672px)
     *
@@ -197,6 +172,7 @@ header
         .logo
             right: 0.5em
         .hero
+            top: 25%
             h1, h1 span
                 font-size: 15rem
             p
@@ -215,14 +191,13 @@ header
     *
         transition: all 300ms ease-in-out
     header
-        .bar2
-            width: 65%
         .hero
             top: 30%
 
             h1, h1 span
-                font-size: 12rem
-
+                font-size: 15rem
+            p
+                font-size: 5rem
 @keyframes headerAnimation
     from
         width: 0px
@@ -244,3 +219,9 @@ header
         opacity: 0
     66.6%, 100%
         opacity: 1
+
+@keyframes arrowAnimation
+    from
+        transform: translateY(-5%)
+    to
+        transform: translateY(0%)
