@@ -4,14 +4,17 @@ window.addEventListener("load", function()
   document.body.removeChild(loadScreen);
 });
 
-// if (!document.hidden) {
-// (function(){
-//   var currentIndex = 0;
-//   var h2 = $('h2');
-//   console.log(h2);
-//   $('h2')
-//     .slideUp(500)
-//     .siblings()
-//       .hide();
-// })();
-// };
+if (!document.hidden) {
+ (function(){
+
+    var diamond = $('.diamond').addClass('dAnimate');
+    $('.arrow').on('click', function()
+      {
+          var element = document.querySelector('.hiddenWaitMessage');
+
+          element.classList.add('waitMessage');
+
+      });
+
+})();
+};
