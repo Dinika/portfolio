@@ -45,11 +45,11 @@ header
         display: flex
         position: absolute
         top: -15px
-        right: 0rem
+        right: 0.5rem
         width: 2.5em
         height: 2.5em
         background: $headerAccent
-        margin-right: 0.5em
+        margin-right: 1em
         font-family: Lato, Courier New
         font-size: 10rem
         font-weight: 900
@@ -87,6 +87,8 @@ header
         margin-right: auto
         padding-left: 4.375em
         padding-bottom: 0.25em
+        transition: transform
+        transition-duration: 500ms
 
         h2
             font-size: 8rem
@@ -127,37 +129,6 @@ header
                 animation: heyAnimate 2850ms
 
 
-        .waitMessage
-            visibility: visible
-            opacity: 1
-            font-size: 4rem
-            margin-top: 1em
-            margin-bottom: 0.75em
-            width: 70%
-            background: rgb(242, 242, 242)
-            color: $headerBody
-            padding: 0.625em
-
-            a
-                color: $headerAccent
-            .loader
-                width: 6.25em
-                margin-left: auto
-                margin-right: auto
-
-                .loadCircle
-                    display: inline-block
-                    height: 0.625em
-                    width: 0.625em
-                    background-color: $headerAccent
-                    border-radius: 50%
-                    margin: 2rem
-                .one
-                    animation: loadAnimation1 1s ease-in-out 0s infinite alternate
-                .two
-                    animation: loadAnimation2 1s ease-in-out 0s infinite alternate
-                .three
-                    animation: loadAnimation3 1s ease-in-out 0s infinite alternate
 
     .rightMenu
         font-size: 4px
@@ -183,6 +154,10 @@ header
 
         .arrow
             cursor: pointer
+
+.hExit
+    transform: translateY(-1600px) translateX(-1600px) translateZ(-300px)
+    opacity: 0.3
 
 
 @media screen and (max-width: 1227px)
@@ -290,24 +265,6 @@ header
         visibility: visible
         opacity: 1
 
-
-@keyframes loadAnimation1
-    0%
-        opacity: 0
-    20%, 100%
-        opacity: 1
-
-@keyframes loadAnimation2
-    0%
-        opacity: 0
-    33.3%, 100%
-        opacity: 1
-
-@keyframes loadAnimation3
-    0%
-        opacity: 0
-    66.6%, 100%
-        opacity: 1
 
 @keyframes arrowAnimate
     0%

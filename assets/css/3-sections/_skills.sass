@@ -1,0 +1,59 @@
+\:root
+    width: 100vw
+    height: 100vh
+.waitMessage
+    font-size: 12px
+    visibility: visible
+    opacity: 1
+    position: fixed
+    top: 40vh
+    left: 30vw
+    width: 40vw
+    margin: auto
+    font-size: 4rem
+    margin-top: 1em
+    margin-bottom: 0.75em
+    background: rgb(242, 242, 242)
+    text-align: center
+    color: $headerBody
+    padding: 0.625em
+
+    a
+        color: $headerAccent
+    .loader
+        width: 6.25em
+        margin-left: auto
+        margin-right: auto
+
+        .loadCircle
+            display: inline-block
+            height: 0.625em
+            width: 0.625em
+            background-color: $headerAccent
+            border-radius: 50%
+            margin: 2rem
+        .one
+            animation: loadAnimation1 1s ease-in-out 0s infinite alternate
+        .two
+            animation: loadAnimation2 1s ease-in-out 0s infinite alternate
+        .three
+            animation: loadAnimation3 1s ease-in-out 0s infinite alternate
+
+
+@keyframes loadAnimation1
+    0%
+        opacity: 0
+    20%, 100%
+        opacity: 1
+
+@keyframes loadAnimation2
+    0%
+        opacity: 0
+    33.3%, 100%
+        opacity: 1
+
+@keyframes loadAnimation3
+    0%
+        opacity: 0
+    66.6%, 100%
+        opacity: 1
