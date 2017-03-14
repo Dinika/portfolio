@@ -8,7 +8,7 @@ if (!document.hidden) {
  (function(){
 
     var diamond = $('.diamond').addClass('dAnimate');
-    $('.arrow').on('click', function()
+    $('.rightMenu .downArrow').on('click', function()
       {
           var element = document.querySelector('.hiddenWaitMessage');
 
