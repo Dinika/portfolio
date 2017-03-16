@@ -1,0 +1,97 @@
+#section2
+    width: 100%
+    font-size: 8px
+    height: 100%
+    display: none
+    position: absolute
+    top: 0px
+
+    .header
+        display: block
+        width: 100%
+        .wrapper
+            width: 70%
+            margin: auto
+            .triangle
+                display: inline-block
+                width: 0
+                height: 0
+                border-top: 15em solid $workAccent
+                border-right: 15em solid transparent
+                margin-top: 3em
+                margin-left: 3em
+            .heading
+                display: inline-block
+                font-size: 12em
+                font-weight: 100
+                span
+                    font-weight: 900
+            .bar
+                width: 20%
+                height: 2em
+                background: $workAccent
+                margin-left: 72%
+                margin-top: 1.5em
+    .projects
+        display: flex
+        width: 60%
+        margin: auto
+        margin-top: 3em
+        flex-wrap: wrap
+        .project
+            width: 30%
+            height: 180px
+            background: url(../img/thumb1.jpg) center center
+            background-size: cover
+            margin-top: 2em
+            margin-left: 2em
+            transition: transform 300ms
+            cursor: pointer
+        .project:hover
+            transform: scale(1.1)
+
+
+
+
+
+    .navButton
+        font-size: 12px
+        display: inline-block
+        position: fixed
+        top: 48vh
+        left: 0em
+        width: 12rem
+        height: 12rem
+        margin-left: 0.67rem
+        cursor: pointer
+        text-align: center
+        animation: heyAnimate 500ms
+        font-style: normal
+        svg
+            transform: rotate(90deg)
+            margin-left: 0.2rem
+            margin-bottom: 0.2rem
+
+    .rightMenu
+        font-size: 4px
+        display: flex
+        position: fixed
+        flex-direction: column
+        right: 5em
+        top: 0em
+        height: 100vh
+        flex-wrap: wrap
+        margin-right: 2.5em
+        justify-content: center
+        animation: heyAnimate 500ms
+
+        .centerIcon
+            stroke: $workAccent
+            margin-top: 15vh
+            margin-bottom: 15vh
+
+        #i-chevron-top
+            cursor: auto
+
+        .arrow
+            cursor: pointer

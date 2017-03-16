@@ -32,7 +32,7 @@ if (!document.hidden) {
         },
         hide: function()
         {
-          section1.skills.slideUp(500);
+          section1.skills.fadeOut(300);
           section2.init();
         }
     }
@@ -42,9 +42,11 @@ if (!document.hidden) {
         work: $('#section2'),
         init: function()
         {
-            $('#section2').delay(500).fadeIn(1000);
+            $('#section2').delay(800).fadeIn(200);
         }
     }
+
+
     section0.init();
 })();
 };
