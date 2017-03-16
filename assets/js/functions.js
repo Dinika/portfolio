@@ -17,18 +17,32 @@ if (!document.hidden) {
         hide: function()
               {
                 var sh = section0.home;
-                sh.addClass('hExit');
+                sh.fadeOut(500);
                 section1.init();
               }
     }
 
     var section1 =
     {
+        skills: $('#section1'),
         init: function()
         {
-          var element = document.querySelector('.hiddenWaitMessage');
-              element.classList.add('waitMessage');
+            $('#section1').delay(500).fadeIn(1000);
+            $('.rightMenu .downArrow').on('click', this.hide);
+        },
+        hide: function()
+        {
+          section1.skills.slideUp(500);
+          section2.init();
+        }
+    }
 
+    var section2 =
+    {
+        work: $('#section2'),
+        init: function()
+        {
+            $('#section2').delay(500).fadeIn(1000);
         }
     }
     section0.init();
