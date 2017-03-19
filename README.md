@@ -39,14 +39,6 @@ Section I'm currently working on
 1. Making the header responsive
 Visit my trello board at https://trello.com/b/jO1qm56Z/web-portfolio.
 
-Todo
--------------------
-1. Use em and rem
-2. Add bourbon mixins
-3. Change the text selection colour.
-4. Add a loader animation
-
-
 For queries or complains please e-mail me at
 -------------------
 dinikasaxenas@gmail.com
