@@ -12,7 +12,7 @@ if (!document.hidden) {
         init: function()
               {
                 var diamond = $('.diamond').addClass('dAnimate');
-                $('.rightMenu .downArrow').on('click', this.hide);
+                $('.rightMenu .downArrow').on('click', section0.hide);
               },
         hide: function()
               {
