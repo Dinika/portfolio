@@ -59,7 +59,23 @@ if (!document.hidden) {
           init: function()
           {
               section3.blog.delay(800).fadeIn(200);
+              $('.rightMenu .downArrow').on('click', this.hide);
           },
+          hide: function()
+          {
+            section3.blog.fadeOut(300);
+            section3.blog.addClass('skillsHide');
+            section4.init();
+          }
+      }
+      var section4 =
+      {
+        contact: $('#section4'),
+        init: function()
+        {
+          section4.contact.delay(800).fadeIn(200);
+
+        },
       }
 
 

@@ -1,0 +1,97 @@
+#section4
+    width: 100%
+    font-size: 8px
+    height: 100%
+    display: none
+    position: absolute
+    top: 0px
+
+    .navButton
+        font-size: 12px
+        display: inline-block
+        position: fixed
+        top: 48vh
+        left: 0em
+        width: 12rem
+        height: 12rem
+        margin-left: 0.67rem
+        cursor: pointer
+        text-align: center
+        animation: heyAnimate 500ms
+        svg
+            transform: rotate(90deg)
+            margin-left: 0.2rem
+            margin-bottom: 0.2rem
+
+    .rightMenu
+        font-size: 4px
+        display: flex
+        position: fixed
+        flex-direction: column
+        right: 5em
+        top: 0em
+        height: 100vh
+        flex-wrap: wrap
+        margin-right: 2.5em
+        justify-content: center
+        animation: heyAnimate 500ms
+        .currentSection
+            font-size: 4em
+            font-weight: 900
+            color: $contactAccent
+            margin-top: 15vh
+            margin-bottom: 15vh
+        .arrow
+            cursor: pointer
+        #i-chevron-bottom
+            stroke: rgb(217, 217, 217)
+            cursor: auto
+
+
+    h1
+        position: absolute
+        font-size: 15em
+        font-weight: 900
+        display: inline-block
+        left: 50%
+        transform: translateX(-50%)
+        z-index: 2
+        margin-top: 20rem
+    .container
+        position: fixed
+        height: 85vh
+        width: 40vw
+        bottom: 0px
+        background: $contactLightAccent
+        left: 50%
+        transform: translateX(-50%)
+        h2, h3, h4
+            margin-left: 2rem
+        h4
+            margin-top: 35rem
+            font-size: 4em
+            font-weight: 900
+            span
+                color: $contactAccent
+                text-decoration: underline
+                text-decoration-color: plum
+        h3
+            margin-top: 10rem
+            font-size: 5em
+            font-weight: 900
+            a
+                color: $contactAccent
+                text-decoration: none
+        h2
+            margin-top: 10rem
+            font-size: 6em
+            font-weight: 900
+            a
+                color: $contactAccent
+                text-decoration: none
+        .copyright
+            font-size: 2em
+            position: fixed
+            bottom: 2rem
+            margin-bottom: 2rem
+            margin-left: 8rem
