@@ -18,7 +18,7 @@ time, mark, audio, video {
 	margin: 0;
 	padding: 0;
 	border: 0;
-	font-family: Lato;
+	font-family: Roboto;
 	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
@@ -26,8 +26,13 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
+html {
+	background-color: #2E1455;
+}
 body {
 	line-height: 1;
+	min-height: 100vh;
+	position: relative;
 }
 ol, ul {
 	list-style: none;
