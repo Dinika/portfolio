@@ -1,16 +1,78 @@
+*, *::after, *::before 
+    -webkit-box-sizing: border-box
+    box-sizing: border-box
+
+\:root
+    font-size: 16px
+
+html, body
+    margin: 0
+    height: 100%
+
+body
+    font-family: 'Roboto', sans-serif
+    color: $basewhitecolor
+    -webkit-font-smoothing: antialiased
+    -moz-osx-font-smoothing: grayscale
+    background-image: url('../img/background.jpg')
+    background-size: cover
+    background-repeat: no-repeat
+    overflow: hidden
+    display: flex
+    flex-direction: column
+    align-items: center
+
+#get-in-touch
+    position: fixed
+    right: 0
+    top: 0
+    font-size: 1.3rem
+    margin: 16px 24px
+    color: $fadedWhite
+
+#get-in-touch:hover
+    color: $basewhitecolor
+
+a
+    outline: none
+    color: $fadedWhite
+    text-decoration: none
+
+nav
+    width: 100vh  
+    font-size: 1.1rem  
+    height: 2.5em
+    position: fixed
+    left: 0
+    display: flex
+    justify-content: center
+    transform-origin: left top
+    transform: rotate(-90deg) translateX(-100%)
+
+nav a
+    display: inline-block
+    margin-right: 2em
+    float: right
+    height: 100%
+    line-height: 2.5em
+
+nav a:hover
+    color: $basewhitecolor
+    margin-top: 0.5em
+
 .decolines
-	pointer-events: none
-	position: absolute
-	width: 100%
-	height: 100%
-	top: 0
-	left: 0
-	pointer-events: none
+    pointer-events: none
+    position: absolute
+    width: 100%
+    height: 100%
+    top: 0
+    left: 0
+    pointer-events: none
 
 .decolines--fixed
-	position: fixed
-	width: 100vw
-	height: 100vh
+    position: fixed
+    width: 100vw
+    height: 100vh
 
 .decoline
-	position: absolute
+    position: absolute
