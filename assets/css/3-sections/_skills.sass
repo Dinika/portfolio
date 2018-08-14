@@ -1,251 +1,54 @@
-.section1
-    width: 100%
-    font-size: 8px
-    height: 100%
-    display: none
+#skills
     position: absolute
-    top: 0px
-    .bg
-        position: fixed
-        top: 0px
-        left: 0px
-        width: 100vw
-        height: 100vh
-        overflow: hidden
-        text-align: center
-        color: rgba(242, 242, 242, 1)
-        z-index: -10
-        cursor: auto
-        pointer-events: none
-        #code
-            position: fixed
-            display: block
-            width: 100vw
-            font-size: 65em
-            font-weight: 900
-            margin-top: -100px
-            text-align: center
-            overflow: hidden
-            animation: skillAnimate
-            animation-duration: 1500ms
-            div
-                line-height: 0.65
-                margin-top: -50px
+    width: calc(80vw - 5px)
+    font-size: 1rem
+    color: $white
+    top: 12vh
+    left: 10vw
+    font-weight: 900
+    height: calc(75vh - 5px)
+    margin: 0.5em 0 0 0.5em
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    transform: translate3d(0,6em,0)
+    animation: fadeIn 3s ease-out forwards
 
-    .skillHeader
-        text-align: center
     h1
         position: relative
-        font-size: 18em
-        margin-top: 10rem
+        font-size: 7rem
         text-align: center
         font-weight: 900
-        animation: skillAnimate
-        animation-duration: 1000ms
         display: inline-block
-    .skillHeader .underline
-        width: 40%
-        height: 20px
-        background: rgb(0, 0, 0)
-        animation: underlineAnimate 1000ms
-        animation-fill-mode: forwards
-        animation-timing-function: ease-out
-    .skillHeader .cursor
+
+    .cursor
         display: inline-block
-        background: black
-        height: 14em
+        background: white
+        height: 5rem
         width: 3px
         margin-left: 15px
         animation: cursorAnimate 1000ms
         animation-iteration-count: infinite
 
     .skillSet
-        width: 70%
-        margin-left: 35em
-        text-align: center
         display: flex
-        .strongSkills, .intermediateSkills
-            display: flex
-            flex-wrap: wrap
-            text-align: left
-            margin: auto
-            margin-top: 3em
-            .bar
-                width: 4em
-                height: 38em
-                background: $skillsAccent
-                order: 1
-                margin-top: 5rem
-            .container
-                order: 2
-                margin-left: 4rem
-                width: 80%
-                .heading
-                    font-size: 2.5em
-                    font-weight: 700
-                    margin-bottom: 0.5rem
-                    span
-                        color: $skillsAccent
-                .skill
-                    display: inline-block
-                    width: 90%
-                .one
-                    font-size: 6.2em
-                    font-weight: 300
-                .two
-                    font-size: 5.2em
-                    font-weight: 300
-                .three
-                    font-size: 6.7em
-                    font-weight: 900
-                .four
-                    font-size: 6.2em
-                    font-weight: 300
-                    font-style: italic
-                .five
-                    font-size: 5em
-                    font-weight: 400
-                .six
-                    font-size: 6.2em
-                    font-weight: 300
-                .seven
-                    font-size: 6em
-                    font-weight: 900
+        width: 75vw
+        flex-direction: row
+        margin-top: 2.5em
+        margin-left: 2em
+        margin-bottom: 2em
+        justify-content: space-around
+        font-size: 2rem
+        font-weight: 300
 
-        .intermediateSkills
-            margin-top: 4em
-            font-style: normal
-            .container
-                .skill
-                    font-size: 5em
-                .one
-                    font-size: 5em
-                    font-weight: 900
-                .three, .seven
-                    font-weight: 300
-                .five
-                    font-weight: 900
-
-    .navButton
-        font-size: 12px
-        display: inline-block
-        position: fixed
-        top: 48vh
-        left: 0em
-        width: 12rem
-        height: 12rem
-        margin-left: 0.67rem
-        cursor: pointer
-        text-align: center
-        animation: heyAnimate 500ms
-        font-style: normal
-        svg
-            transform: rotate(90deg)
-            margin-left: 0.2rem
-            margin-bottom: 0.2rem
-
-    .rightMenu
-        font-size: 4px
-        display: flex
-        position: fixed
-        flex-direction: column
-        right: 5em
-        top: 0em
-        height: 100vh
-        flex-wrap: wrap
-        margin-right: 2.5em
-        justify-content: center
-        animation: heyAnimate 500ms
-
-        .centerIcon
-            stroke: $skillsAccent
-            margin-top: 15vh
-            margin-bottom: 15vh
-
-        #i-chevron-top
-            cursor: auto
-
-        .arrow
-            cursor: pointer
-.skillsHide
-    visibility: hidden
-    opacity: 0
-    pointer-events: none
-@keyframes skillAnimate
-    from
-        opacity: 0
-        visibility: hidden
-    to
-        opacity: 1
-        visibility: visible
-
-@keyframes underlineAnimate
-    0%
-        transform: translateX(0%)
-        width: 5%
-    50%
-        width: 30%
-    100%
-        transform: translateX(300%)
+        .skill-level
+            font-weight: 500
+            font-size: 1.5rem
+            margin-bottom: 1em
 
 @keyframes cursorAnimate
     from
         opacity: 0
     to
-        opacity: 1
-// .waitMessage
-//     font-size: 12px
-//     visibility: visible
-//     opacity: 1
-//     position: fixed
-//     top: 40vh
-//     left: 30vw
-//     width: 40vw
-//     margin: auto
-//     font-size: 4rem
-//     margin-top: 1em
-//     margin-bottom: 0.75em
-//     background: rgb(242, 242, 242)
-//     text-align: center
-//     color: $headerBody
-//     padding: 0.625em
-//
-//     a
-//         color: $headerAccent
-//     .loader
-//         width: 6.25em
-//         margin-left: auto
-//         margin-right: auto
-//
-//         .loadCircle
-//             display: inline-block
-//             height: 0.625em
-//             width: 0.625em
-//             background-color: $headerAccent
-//             border-radius: 50%
-//             margin: 2rem
-//         .one
-//             animation: loadAnimation1 1s ease-in-out 0s infinite alternate
-//         .two
-//             animation: loadAnimation2 1s ease-in-out 0s infinite alternate
-//         .three
-//             animation: loadAnimation3 1s ease-in-out 0s infinite alternate
-//
-//
-// @keyframes loadAnimation1
-//     0%
-//         opacity: 0
-//     20%, 100%
-//         opacity: 1
-//
-// @keyframes loadAnimation2
-//     0%
-//         opacity: 0
-//     33.3%, 100%
-//         opacity: 1
-//
-// @keyframes loadAnimation3
-//     0%
-//         opacity: 0
-//     66.6%, 100%
-//         opacity: 1
+        opacity: 1    

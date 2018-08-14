@@ -6,6 +6,51 @@ window.addEventListener("load", function()
 });
 
 if (!document.hidden) {
+  const sectionsMap = [
+    {
+      name: 'header',
+      number: 0
+    },
+    {
+      name: 'skills',
+      number: 1,
+    },
+    {
+      name: 'projects',
+      number: 2,
+    },
+    {
+      name: 'blog',
+      number: 3,
+    },
+    {
+      name: 'contact',
+      number: 4,
+    },
+  ];
+
+  let currentSection = sectionsMap[0];
+
+  document.querySelector('.next-button').addEventListener('click', function(){
+    let nextSection = sectionsMap[currentSection.number + 1];
+    let nextSectionDiv = document.getElementById(nextSection.name);
+    let currentSectionDiv = document.getElementById(currentSection.name);
+    nextSectionDiv.classList.toggle('hide');
+    currentSectionDiv.classList.toggle('hide');
+    currentSection = sectionsMap[nextSection.number];
+    revealContent();
+  });
+
+  document.querySelector('.previous-button').addEventListener('click', function(){
+    let nextSection = sectionsMap[currentSection.number - 1];
+    let nextSectionDiv = document.getElementById(nextSection.name);
+    let currentSectionDiv = document.getElementById(currentSection.name);
+    nextSectionDiv.classList.toggle('hide');
+    currentSectionDiv.classList.toggle('hide');
+    currentSection = sectionsMap[nextSection.number];
+    revealContent();
+  });
+
   function revealContent() {
     var lineMaker = new LineMaker({
         parent: { element: document.body, position: 'append' },
@@ -23,4 +68,7 @@ if (!document.hidden) {
       lineMaker.animateLinesOut();
     }, 0);
   }
+
+  
+
 };
