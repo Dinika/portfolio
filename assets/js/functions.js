@@ -16,7 +16,7 @@ if (!document.hidden) {
       number: 1,
     },
     {
-      name: 'projects',
+      name: 'work',
       number: 2,
     },
     {
@@ -31,24 +31,34 @@ if (!document.hidden) {
 
   let currentSection = sectionsMap[0];
 
-  document.querySelector('.next-button').addEventListener('click', function(){
-    let nextSection = sectionsMap[currentSection.number + 1];
-    let nextSectionDiv = document.getElementById(nextSection.name);
-    let currentSectionDiv = document.getElementById(currentSection.name);
-    nextSectionDiv.classList.toggle('hide');
-    currentSectionDiv.classList.toggle('hide');
-    currentSection = sectionsMap[nextSection.number];
-    revealContent();
+  //TODO: refactor
+  sectionsMap.map( section => {
+    if(document.getElementById(section.name)) {
+      document.getElementById(section.name).querySelector('.next-button').addEventListener('click', function(){
+        let nextSection = sectionsMap[currentSection.number + 1];
+        let nextSectionDiv = document.getElementById(nextSection.name);
+        let currentSectionDiv = document.getElementById(currentSection.name);
+        nextSectionDiv.classList.toggle('hide');
+        currentSectionDiv.classList.toggle('hide');
+        currentSection = sectionsMap[nextSection.number];
+        revealContent();
+      });
+    }
   });
 
-  document.querySelector('.previous-button').addEventListener('click', function(){
-    let nextSection = sectionsMap[currentSection.number - 1];
-    let nextSectionDiv = document.getElementById(nextSection.name);
-    let currentSectionDiv = document.getElementById(currentSection.name);
-    nextSectionDiv.classList.toggle('hide');
-    currentSectionDiv.classList.toggle('hide');
-    currentSection = sectionsMap[nextSection.number];
-    revealContent();
+  //TODO: refactor
+  sectionsMap.map( section => {
+    if(document.getElementById(section.name) && document.getElementById(section.name).querySelector('.previous-button')) {
+      document.getElementById(section.name).querySelector('.previous-button').addEventListener('click', function(){
+        let nextSection = sectionsMap[currentSection.number - 1];
+        let nextSectionDiv = document.getElementById(nextSection.name);
+        let currentSectionDiv = document.getElementById(currentSection.name);
+        nextSectionDiv.classList.toggle('hide');
+        currentSectionDiv.classList.toggle('hide');
+        currentSection = sectionsMap[nextSection.number];
+        revealContent();
+      });
+    }
   });
 
   function revealContent() {
@@ -68,7 +78,5 @@ if (!document.hidden) {
       lineMaker.animateLinesOut();
     }, 0);
   }
-
-  
 
 };
