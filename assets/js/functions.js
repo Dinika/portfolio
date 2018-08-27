@@ -2,7 +2,7 @@ window.addEventListener("load", function()
 {
   var loadScreen = document.getElementById('loadScreen');
   document.body.removeChild(loadScreen);
-  revealContent();
+  revealContent && revealContent();
 });
 
 if (!document.hidden) {
@@ -31,9 +31,21 @@ if (!document.hidden) {
 
   let currentSection = sectionsMap[0];
 
+  const projects = [
+    {
+      name: 'cern-dashboard',
+    },
+    {
+      name: 'optimizing-critical-rendering-path',
+    },
+    {
+      name: 'inspire'
+    }
+  ]
+
   //TODO: refactor
   sectionsMap.map( section => {
-    if(document.getElementById(section.name)) {
+    if(document.getElementById(section.name) && document.getElementById(section.name).querySelector('.next-button')) {
       document.getElementById(section.name).querySelector('.next-button').addEventListener('click', function(){
         let nextSection = sectionsMap[currentSection.number + 1];
         let nextSectionDiv = document.getElementById(nextSection.name);
@@ -61,6 +73,14 @@ if (!document.hidden) {
     }
   });
 
+  projects.map( project => {
+    if(document.getElementById(project.name)) {
+      document.getElementById(project.name).addEventListener('click', function() {
+        currentSection = sectionsMap[2];
+      })
+    }
+  });
+
   function revealContent() {
     var lineMaker = new LineMaker({
         parent: { element: document.body, position: 'append' },
@@ -79,4 +99,8 @@ if (!document.hidden) {
     }, 0);
   }
 
+
+  function displayProjectCaseStudy() {
+
+  }
 };

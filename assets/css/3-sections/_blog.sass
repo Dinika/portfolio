@@ -1,149 +1,66 @@
-#section3
-    width: 100%
-    font-size: 8px
-    height: 100%
-    display: none
-    position: absolute
-    top: 0px
-
-    .navButton
-        font-size: 12px
-        display: inline-block
-        position: fixed
-        top: 48vh
-        left: 0em
-        width: 12rem
-        height: 12rem
-        margin-left: 0.67rem
-        cursor: pointer
-        text-align: center
-        animation: heyAnimate 500ms
-        svg
-            transform: rotate(90deg)
-            margin-left: 0.2rem
-            margin-bottom: 0.2rem
-
-    .rightMenu
-        font-size: 4px
-        display: flex
-        position: fixed
-        flex-direction: column
-        right: 5em
-        top: 0em
+#blog
+    &.section-wrapper
         height: 100vh
-        flex-wrap: wrap
-        margin-right: 2.5em
-        justify-content: center
-        animation: heyAnimate 500ms
-        .currentSection
-            font-size: 4em
-            font-weight: 900
-            color: $blogAccent
-            margin-top: 15vh
-            margin-bottom: 15vh
-        .arrow
-            cursor: pointer
-
-    .circle
-        border-radius: 50%
-        position: fixed
-    .top
-        z-index: -1
-        margin-top: -40px
-        margin-left: 20em
-        height: 31em
-        width: 31em
-        background: $blogLightAccent
-    .bottom
-        z-index: 2
-        top: 70%
-        left: 63%
-        transform: translate(-63%, -70%)
-        height: 25em
-        width: 25em
-        background: $blogAccent
-        opacity: 0.79
-    .letter
-        font-size: 42em
-        font-weight: 900
-        position: fixed
-        bottom: 1rem
-        right: 13rem
-        z-index: -1
-        color: rgb(191, 191, 191)
-    .header
-        width: 70%
-        height: 30%
-        margin: auto
-        display: flex
-        flex-wrap: wrap
+        top: 0
+    h1
         position: relative
-        h1
-            font-size: 20em
-            font-weight: 900
-            display: inline-block
-            margin-top: 2rem
-            span
-                color: $blogAccent
-        .blogInfo
-            display: inline-block
-            position: absolute
-            right: 0em
-            height: 90%
-            margin-right: 2rem
-            margin-top: 2rem
-            h3
-                font-size: 2.5em
-                font-weight: 700
-                span
-                    text-decoration: underline
-                    text-decoration-color: red
-            h4
-                font-size: 2em
-                margin-top: 1rem
-            h5
-                font-size: 1.5em
-                font-weight: 700
-                margin-top: 2rem
-                color: $blogAccent
-            h2
-                font-size: 2.5em
-                font-weight: 700
-                position: absolute
-                bottom: 0rem
-                color: $blogAccent
+        font-size: 7rem
+        text-align: center
+        font-weight: 900
+        display: inline-block
+    .big-dot
+        width: 2em
+        height: 2em
+        background-color: $basepurplecolor
+        border-radius: 50%
+        display: inline-block
 
-    .pictureGrid
+    .main-content-container
+        width: 60vw
+        max-height: 75%
+        overflow: hidden 
         display: flex
-        flex-wrap: wrap
-        position: absolute
-        left: 50%
-        width: 70%
-        transform: translateX(-50%)
-        height: 60%
-        margin-top: 7rem
-        .pic1
-            display: inline-block
-            background: url(../img/blogPic1.jpg) center center
-            height: 90%
-            width: 65%
-            margin-top: 2rem
-        .smallOnes
+        flex-direction: column
+        margin: 0
+        .visit-blog
+            text-align: right
+            font-size: 1.5rem
+            margin-bottom: 0.5em
+            a:hover
+                color: $baseRed
+        .blogs-container
             display: flex
-            flex-wrap: wrap
-            width: 32%
-            height: 90%
-            margin-top: 2rem
-            margin-left: 4rem
-            align-items: stretch
-            position: relative
-            .pic2
-                background: url(../img/blogPic2.jpg) center center
-                width: 100%
-                height: 48%
-            .pic3
-                position: absolute
-                bottom: 0em
-                background: url(../img/blogPic3.jpg) center center
-                width: 100%
-                height: 48%
+            flex-direction: row
+            justify-content: space-around
+            background-color: $transparentbasepurple
+            padding: 0.75em
+            margin-bottom: 2em
+            a
+                font-size: 1.25rem
+                margin-bottom: 1em
+                display: inherit
+                &:hover
+                    color: $baseRed
+            .left-panel
+                text-align: right
+                width: 70%
+                margin-right: 1em
+                .blog-title
+                    margin-top: 1em
+                img
+                    height: 95%
+                    max-height: 400px
+                    width: 100%
+            .right-panel
+                text-align: right
+                max-width: 30%
+                .wrapper
+                    position: relative
+                    padding-top: 56.25%
+                    img
+                        position: absolute
+                        left: 0
+                        top: 0
+                        width: 100%
+                        height: auto
+                        max-height: 100%
