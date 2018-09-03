@@ -9,16 +9,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/png" href="favicon.ico">
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
-    <link href="assets/css/main.css" rel="stylesheet">
+    <link href="assets/css/case-studies.css" rel="stylesheet">
 
   </head>
   <body>
     <section>
       <h1>CERN Dashboard</h1>
       <h3>Visualization of Cloud Resources at CERN</h3>
-      
-      <iframe src="https://youtu.be/m-DKVuZNm4Q"></iframe>
-      <blockquote>"A prototype that visualizes the cloud resources at CERN"</blockquote>
+      <div class="iframe-wrapper">
+        <iframe width="800" height="430" src="https://www.youtube.com/embed/m-DKVuZNm4Q" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        <blockquote>"A prototype that visualizes the cloud resources at CERN"</blockquote>
+      </div>
 
       <p><span class="paragraph-heading">Technologies Used:</span> HTML5, CSS, SVG,
         JavaScript, D3.JS, and Dimple.</p>
@@ -38,7 +39,7 @@
         machines.</p>
       
       <figure>
-        <img src="assets/img/cern-topology.png" alt="CERN cloud resources topology">
+        <img src="assets/img/cern-topology.jpg" alt="CERN cloud resources topology">
         <figcaption>The hierarchy of cloud resources at CERN</figcaption>
       </figure>
 
@@ -55,8 +56,8 @@
         component and every edge would show the relationship that the components share with
         each other.</p>
 
-      <p><i>In order to create an effective representation of data it is significant to draw a distinction
-        between the exploratory and explanatory data visualization.</i> While working on the
+      <p>In order to create an effective representation of data <span class="highlight">it is significant to draw a distinction
+        between the exploratory and explanatory data visualization</span>. While working on the
         exploratory side of visualization it was important to get a sense of what the data is and what it 
         can convey to its audience (the number, type, status, etc of
         various cloud components and the relationship they share with each other). This was a
@@ -66,7 +67,7 @@
         highlight.</p>
             
       <figure>
-        <img src="assets/img/cern-dashboard-mockup.png" alt="CERN cloud resources topology">
+        <img src="assets/img/cern-dashboard-mockup.jpg" alt="CERN cloud resources topology">
         <figcaption>Sketch for the proposed design of the dashboard</figcaption>
       </figure>
 
@@ -75,19 +76,19 @@
         angles, in an unbiased way. In order to do that four key points were considered:</p>
       
       <ul>
-        <li>having a really robust understanding of the context - <span class="highlight">The primary audience was
-          identified as the members of the IT team and/or CERN employees</span> or visitors who
+        <li>Having a really robust understanding of the context - The primary audience was
+          identified as the members of the IT team and/or CERN employees or visitors who
           have prior understanding of cloud technologies and are trying to understand or find
           out details about the topology of cloud at CERN</li>
-        <li>choosing an appropriate type of visual - <span class="highlight">A collapsible force-layout graph was
-          chosen as the best option for the representation of the data</span> in topo.json. Allowing
+        <li>Choosing an appropriate type of visual - <span class="highlight">A collapsible force-layout graph was
+          chosen</span> as the best option for the representation of the data in topo.json. Allowing
           the users to zoom into faulty virtual machines was also considered. Simple features
           like clicking on the nodes to display their details and hovering over them to see
           their name were decided to be added to the dashboard</li>
-        <li>removing the clutter - It is a primary design principle to eliminate things that don't
+        <li>Removing the clutter - It is a primary design principle to eliminate things that don't
           add informative value to the visuals. Doing so decreases cognitive load, does not
           overwhelm the user, and also causes the data to just stand out more</li>
-        <li>drawing the audience's attention to where we want them to pay it - It was at this
+        <li>Drawing the audience's attention to where we want them to pay it - It was at this
           point that the strategic decisions about the color, size, and placement of various
           elements on the page were made. Also, efforts were made to follow principles that
           make the design comprehensible to a wider audience, for example, mixing and
@@ -95,7 +96,7 @@
           color-blind people</li>
       </ul>
       
-      <p><span class="paragraph-heading">Features Added</span>Following is the list of features added to the dashboard:</p>
+      <p><span class="paragraph-heading">Features Added </span>
         <ul>
           <li>The collapsible force layout graph was designed by customizing the open-sourced code
             available at <a href="https://bl.ocks.org/mbostock/1062288">Mike Bostock's (creator of D3.JS) website</a>. Every child node of a particular
@@ -106,8 +107,11 @@
           <li>on clicking the 'Zoom into faulty VMs' buttons on the top, a transition that loops
             endlessly begins focusing on the faulty VMs by zooming into them.</li>
         </ul>
-      
-      <iframe src="https://youtu.be/0knLkiUWzvY"></iframe>
+      </p>
+      <div class="iframe-wrapper">
+        <iframe width="800" height="430" src="https://www.youtube.com/embed/0knLkiUWzvY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        <blockquote>The feature of zooming into faulty virtual machines was also addded</blockquote>
+      </div>
 
     </section>
   </body>
