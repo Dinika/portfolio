@@ -7,44 +7,48 @@
 
 html, body
     background-color: $white
+    ::selection
+        background: $highlightPurple 
 section
     margin: 5em auto
-    width: 80vw
+    width: 60vw
     transform: translate3d(0,6em,0)
     animation: fadeIn 3s ease-out forwards
-    h1, h3
-        text-align: center
+
+    header
+        border-left: 2em solid $basepurplecolor
+        padding: 0 0.5em
     h1
-        font-size: 5em
-        color: $caseStudyPurple
+        font-size: 7rem
+        color: $darkgray
         font-weight: 900
     h3  
-        font-size: 1.5rem
+        font-size: 2rem
         color: $darkgray
         font-weight: 300
-        margin: 0.5em auto
+        margin: 0.1em
     blockquote
         font-size: 1.25rem
-        text-align: center
         color: $darkgray
-        margin: 1em auto
+        margin: 1em 0
     p
-        font-size: 1.25rem
+        font-size: 1.75rem
+        font-weight: 300
         margin: 1em auto
         color: $darkgray
-        text-align: justify
         line-height: 1.5
+        &:first-of-type
+            margin-top: 6em
         .paragraph-heading
-            color: $caseStudyPurple
-            font-size: 1.5rem
-            font-weight: 500
+            font-size: 1.75rem
+            font-weight: 700
     .highlight
-        color: $caseStudyPurple
+        background-color: $highlightPurple
     .iframe-wrapper
         display: flex
         flex-direction: column
         align-items: center
-        margin-top: 6em
+        margin-top: 3em
 
     figure
         display: flex
@@ -54,15 +58,25 @@ section
             max-width: 800px
             height: auto
     a
-        color: $caseStudyPurple
+        color: $darkgray
         &:hover
-            color: $baseRed
+            color: $basepurplecolor
     ul
         list-style: inside
-        font-size: 1.25rem
+        font-size: 1.75rem
+        font-weight: 300
         color: $darkgray
         line-height: 1.5
+        &.resources
+            list-style: none
 
+footer
+    font-size: 1.25rem
+    text-align: center
+    width: 100%
+    position: absolute
+    margin-bottom: 1em
+    margin-top: 3em
 
 @keyframes fadeIn
     0%, 40% 

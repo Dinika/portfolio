@@ -14,23 +14,28 @@
   </head>
   <body>
     <section>
-      <h1>CERN Dashboard</h1>
-      <h3>Visualization of Cloud Resources at CERN</h3>
-      <div class="iframe-wrapper">
-        <iframe width="800" height="430" src="https://www.youtube.com/embed/m-DKVuZNm4Q" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        <blockquote>"A prototype that visualizes the cloud resources at CERN"</blockquote>
-      </div>
+      <header>
+        <h1>CERN Dashboard</h1>
+        <h3>Visualization of Cloud Resources at CERN</h3>
+      </header>
 
       <p><span class="paragraph-heading">Technologies Used:</span> HTML5, CSS, SVG,
         JavaScript, D3.JS, and Dimple.</p>
 
+      <p> <span class="highlight">Project at CERN as an Openlab Summer Student from June to August 2016</span></p>
+
       <p>With over 7300 hypervisors in two data centers in the CERN Openstack cloud there is a
-        need to easily visualize the current usage and allocations. My project was to investigate
+        need to easily visualize the current usage and allocations. My project was to <span class="highlight">investigate
         and prototype a service dashboard after collecting the topology information of the CERN
-        cloud. Standard monitoring building blocks which assist in resource planning and
+        cloud.</span> Standard monitoring building blocks which assist in resource planning and
         visualization of Openstack cloud resources by the cloud administration team and WLCG
         resource management, were used for this purpose.</p>
 
+      <div class="iframe-wrapper">
+        <iframe width="800" height="430" src="https://www.youtube.com/embed/m-DKVuZNm4Q" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        <blockquote>"A prototype that visualizes the cloud resources at CERN"</blockquote>
+      </div>
+        
       <p>The topology of cloud resources at CERN follows hierarchical format. At the highest level
         there is a central cell, which will be referred to as cell00 in the rest of the report. At the
         next level there are several child cells which have been categorized on the basis of their
@@ -47,9 +52,9 @@
         not available in a single place, being spread in different databases. A topology collector
         was written which dumps it into a single json file. It is very inefficient, if not impossible to
         dig through an enormous file every time some information is required. Also, a json file is
-        not the best or the most comprehensible representation of data for humans. Therefore, a
+        not the best or the most comprehensible representation of data for humans. <span class="highlight">Therefore, a
         dashboard that represents the relationship between several cloud components in an easy to
-        understand format was required.</p>
+        understand format was required.</span></p>
 
       <p><span class="paragraph-heading">Process</span> The proposed solution was to design a dashboard that translates the hierarchy in the data
         stored in the json file (topo.json) into a graph in which each node would represent a cloud
@@ -76,8 +81,8 @@
         angles, in an unbiased way. In order to do that four key points were considered:</p>
       
       <ul>
-        <li>Having a really robust understanding of the context - The primary audience was
-          identified as the members of the IT team and/or CERN employees or visitors who
+        <li>Having a really robust understanding of the context - <span class="highlight">The primary audience was
+          identified as the members of the IT team and/or CERN employees or visitors</span> who
           have prior understanding of cloud technologies and are trying to understand or find
           out details about the topology of cloud at CERN</li>
         <li>Choosing an appropriate type of visual - <span class="highlight">A collapsible force-layout graph was
@@ -101,18 +106,33 @@
           <li>The collapsible force layout graph was designed by customizing the open-sourced code
             available at <a href="https://bl.ocks.org/mbostock/1062288">Mike Bostock's (creator of D3.JS) website</a>. Every child node of a particular
             parent node collapses and merges into its parent when the latter is clicked</li>
-          <li>the users can hover over the nodes to read their name that is displayed in a tool tip, or
+          <li>The users can hover over the nodes to read their name that is displayed in a tool tip, or
             they can click on them to read their details displayed in the table on the top-right of the
             dashboard</li>
-          <li>on clicking the 'Zoom into faulty VMs' buttons on the top, a transition that loops
+          <li>On clicking the 'Zoom into faulty VMs' buttons on the top, a transition that loops
             endlessly begins focusing on the faulty VMs by zooming into them.</li>
         </ul>
       </p>
       <div class="iframe-wrapper">
         <iframe width="800" height="430" src="https://www.youtube.com/embed/0knLkiUWzvY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        <blockquote>The feature of zooming into faulty virtual machines was also addded</blockquote>
+        <blockquote>The feature of zooming into faulty virtual machines was also added</blockquote>
       </div>
 
+      <p><span class="paragraph-heading">Resources</span>
+        <ul class="resources">
+          <li><a href="https://github.com/Dinika/cernDashboard">GitHub Repo</a></li>
+          <li><a href="https://openlab-archive-phases-iv-v.web.cern.ch/publications/technical_documents/resource-visualization">Project Report</a></li>
+          <li><a href="https://cds.cern.ch/record/2212886">Summer Student Lightning Talk</a></li>
+          <li><a href="https://indico.cern.ch/event/557791/contributions/2269282/attachments/1324576/1987854/RESOURCE_VISUALISATION___Dinika_Saxena.pdf">Project Presentation</a></li>
+        </ul>
+      </p>
+
+      <p><span class="paragraph-heading">Award</span> 2nd prize for best project presentation at CERN Lightning Talks Session 2016
+      </p>
+
     </section>
+    <footer>
+        Copyright &copy 2018 dinika.github.io/portfolio/ All Rights Reserved.
+      </footer>
   </body>
 </html>
