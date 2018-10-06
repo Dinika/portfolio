@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>CERN Dashboard</title>
+    <title>Inspire</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/png" href="favicon.ico">
@@ -15,33 +15,38 @@
   <body>
     <section>
       <header>
-        <h1>CERN Dashboard</h1>
-        <h3>Visualization of Cloud Resources at CERN</h3>
+        <h1>Inspire</h1>
+        <h3>An online repository of everything HEP</h3>
       </header>
 
-      <p><span class="paragraph-heading">Technologies Used:</span> HTML5, CSS, SVG,
-        JavaScript, D3.JS, and Dimple.</p>
+      <p><span class="paragraph-heading">Technologies Used:</span> React, Redux, Jest, Enzyme, Puppeteer, Ant Design, ES6, 
+        AngularJS, Angular 2, BootStrap, Python</p>
 
-      <p> <span class="highlight">Project at CERN as an Openlab Summer Student from June to August 2016</span></p>
+      <p> <span class="highlight">Frontend developer from September 2017 to now</span></p>
 
-      <p>With over 7300 hypervisors in two data centers in the CERN Openstack cloud there is a
-        need to easily visualize the current usage and allocations. My project was to <span class="highlight">investigate
-        and prototype a service dashboard after collecting the topology information of the CERN
-        cloud.</span> Standard monitoring building blocks which assist in resource planning and
-        visualization of Openstack cloud resources by the cloud administration team and WLCG
-        resource management, were used for this purpose.</p>
+      <p><span class="paragraph-heading">Background </span>Inspire is a modern day successor of <a href="https://www.slac.stanford.edu/spires/about/">
+        Spires</a> - a 1960s database of particle physics literature curated by Standard Linear Accelerator Center (SLAC) in collaboration
+        with physics institutes around the world. <span class="highlight">In 1991 it became the first website in North America.</span>
+        In May 2007, CERN, DESY, Fermilab and SLAC decided to build the next-generation High Energy Physics (HEP) information 
+        system which would combine the successful SPIRES database content with <a href="http://invenio-software.org/">Invenio</a> digital
+        library technology developed at CERN and thus <a href="">Inspire</a> was born. INSPIRE is run by a collaboration of CERN, DESY, 
+        Fermilab, IHEP, and SLAC, and interacts closely with HEP publishers, arXiv.org, NASA-ADS, PDG, HEPDATA and other information 
+        resources. Aside from </p>
 
-      <div class="iframe-wrapper">
-        <iframe width="800" height="430" src="https://www.youtube.com/embed/m-DKVuZNm4Q" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        <blockquote>"A prototype that visualizes the cloud resources at CERN"</blockquote>
-      </div>
+        <figure>
+            <img src="assets/img/old-inspire.jpg" alt="screenshot of the landing page of old inspire">
+            <figcaption>The landing page for now legacy Inspire</figcaption>
+        </figure>
         
-      <p>The topology of cloud resources at CERN follows hierarchical format. At the highest level
-        there is a central cell, which will be referred to as cell00 in the rest of the report. At the
-        next level there are several child cells which have been categorized on the basis of their
-        computing speed, performance, and storage capacities. Each of these sub cells have
-        hypervisors running on them, and every hypervisor in turn hosts one or several virtual
-        machines.</p>
+      <p>When I joined the Inspire team on 1st of September, 2017, it was working on transitioning Inspire into a new and improved
+        web app which provided a ton of new features to its users, including (but not limited to) google style search, author 
+        disambiguation for high-quality profiles and improved search capabilities and faster results. This new application was using
+        Angular 2.0 (and sometimes AngularJS) as a frontend technology framework along with gulp, bootstrap, and jinja.</p>
+        
+       <p>Even though the generated app could indeed support several new features, the developers were quite discontent with both, the quality of code and
+        team efficiency. Therefore, in February 2018 we adopted the Scrum framework to develop and deliver features in iterations and in 
+        April 2018 the frontend engineers decided to build a true SPA using React and Redux for development and state management, Ant design 
+        as the design framework, and Jest, Enzyme, and Puppeteer for testing.</p>
       
       <figure>
         <img src="assets/img/cern-topology.jpg" alt="CERN cloud resources topology">
