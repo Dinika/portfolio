@@ -53,6 +53,7 @@ if (!document.hidden) {
         nextSectionDiv.classList.toggle('hide');
         currentSectionDiv.classList.toggle('hide');
         currentSection = sectionsMap[nextSection.number];
+        highlightClickedNavOption(currentSection.number);
         revealContent();
       });
     }
@@ -68,18 +69,33 @@ if (!document.hidden) {
         nextSectionDiv.classList.toggle('hide');
         currentSectionDiv.classList.toggle('hide');
         currentSection = sectionsMap[nextSection.number];
+        highlightClickedNavOption(currentSection.number);
         revealContent();
       });
     }
   });
 
-  projects.map( project => {
-    if(document.getElementById(project.name)) {
-      document.getElementById(project.name).addEventListener('click', function() {
-        currentSection = sectionsMap[2];
-      })
+  if(document.getElementsByClassName('navigation-option')){
+    let navigationOptions = document.getElementsByClassName('navigation-option');
+    for(var i = 0; i <= navigationOptions.length; i++) {
+        navigationOptions[i] && navigationOptions[i].addEventListener('click', navigateToSection.bind(navigationOptions[i], i));
     }
-  });
+  }
+
+  function navigateToSection(sectionIndex) {
+    highlightClickedNavOption(sectionIndex);
+    currentSectionDiv = document.getElementById(currentSection.name);
+    currentSectionDiv.classList.toggle('hide');
+    nextSectionDiv = document.getElementById(sectionsMap[sectionIndex]['name']);
+    nextSectionDiv.classList.toggle('hide');
+    currentSection = sectionsMap[sectionIndex];
+    revealContent();
+  }
+
+  function highlightClickedNavOption(clickedSectionIndex) {
+    document.querySelector('.navigation-option.active').classList.toggle('active');
+    document.querySelector('nav').children[clickedSectionIndex].classList.toggle('active');
+  }
 
   function revealContent() {
     var lineMaker = new LineMaker({
@@ -97,10 +113,5 @@ if (!document.hidden) {
     setTimeout(function() {
       lineMaker.animateLinesOut();
     }, 0);
-  }
-
-
-  function displayProjectCaseStudy() {
-
   }
 };

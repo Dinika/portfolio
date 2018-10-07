@@ -11,10 +11,10 @@ html, body
 
 body
     font-family: 'Roboto', sans-serif
-    color: $basewhitecolor
+    color: $basicBlack
     -webkit-font-smoothing: antialiased
     -moz-osx-font-smoothing: grayscale
-    background-image: url('../img/background.jpg')
+    background-color: $backgroundWhite
     background-size: cover
     background-repeat: no-repeat
     overflow: hidden
@@ -29,7 +29,7 @@ body
     position: absolute
     width: calc(80vw - 5px)
     font-size: 1rem
-    color: $white
+    color: $basicBlack
     top: 12vh
     left: 10vw
     font-weight: 900
@@ -53,20 +53,24 @@ body
     font-size: 2rem
     font-weight: 300
 
+.logo
+    margin-top: 16px
+
 #get-in-touch
     position: fixed
     right: 0
     top: 0
     font-size: 1.3rem
     margin: 16px 24px
-    color: $fadedWhite
+    color: $basicBlack
 
 #get-in-touch:hover
-    color: $basewhitecolor
+    color: $woahColor
+    font-weight: 500
 
 a
     outline: none
-    color: $fadedWhite
+    color: $basicBlack
     text-decoration: none
 
 nav
@@ -86,9 +90,10 @@ nav a
     float: right
     height: 100%
     line-height: 2.5em
+    &.active
+        font-weight: 700
 
 nav a:hover
-    color: $basewhitecolor
     margin-top: 0.5em
 
 .decolines
@@ -110,10 +115,12 @@ nav a:hover
 
 .next-button, .previous-button
     font-size: 1rem
-    background: $transparentbasepurple
+    background: $basicBlack
     border: none
     padding: 1em 2em
     margin: 0 3em
     cursor: pointer
     &:focus
         outline: none
+    &:hover
+        background: $woahColor
