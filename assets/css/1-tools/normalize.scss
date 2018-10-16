@@ -26,13 +26,15 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
-html {
-	background-color: #3c3c3c;
-}
+
 body {
 	line-height: 1;
-	min-height: 100vh;
+	min-height: 100%;
 	position: relative;
+}
+html {
+	min-height: 100%;
+	background-color: #3c3c3c;
 }
 ol, ul {
 	list-style: none;
