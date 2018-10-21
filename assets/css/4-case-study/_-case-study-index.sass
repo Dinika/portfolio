@@ -69,7 +69,7 @@ section
     a
         color: $basicBlack
         &:hover
-            color: $highlightColor
+            background-color: $highlightColor
     ul
         list-style: inside
         font-size: 1.75rem
@@ -78,6 +78,14 @@ section
         line-height: 1.5
         &.resources
             list-style: none
+    .image-container
+        display: flex
+        justify-content: end
+        figcaption
+            text-align: center   
+        figure
+            margin-right: 3em
+            max-width: 600px
 
 footer
     font-size: 1.25rem
