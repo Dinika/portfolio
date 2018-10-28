@@ -13,126 +13,116 @@
 
   </head>
   <body>
-    <section>
-      <header>
+    <header>
+      <div class="left-border"></div>
+      <hgroup>
         <h1>Inspire</h1>
         <h3>An online repository of everything HEP</h3>
-      </header>
+      </hgroup>
+    </header>
+    <section>
+      <p><span class="paragraph-heading">Technologies Used:</span> React, Redux, Jest, Enzyme, Puppeteer, Ant Design, ES6, AngularJS, Angular 2, BootStrap, Python</p>
 
-      <p><span class="paragraph-heading">Technologies Used:</span> React, Redux, Jest, Enzyme, Puppeteer, Ant Design, ES6, 
-        AngularJS, Angular 2, BootStrap, Python</p>
+      <p><span class="highlight">Frontend developer from September 2017 to now</span></p>
 
-      <p> <span class="highlight">Frontend developer from September 2017 to now</span></p>
+      <p><span class="paragraph-heading">Background</span> Inspire is a modern-day successor of <a href="https://www.slac.stanford.edu/spires/about/">Spires</a> - a 1960s database of particle physics literature curated by Standard Linear Accelerator Center (SLAC) in collaboration with physics institutes around the world. <span class="highlight">In 1991 it became the first website in North America.</span> In May 2007, CERN, DESY, Fermilab and SLAC decided to build the next-generation High Energy Physics (HEP) information system which would combine the successful SPIRES database content with <a href="http://invenio-software.org/">Invenio</a> digital library technology developed at CERN and thus <a href="http://inspirehep.net/">Inspire</a> was born. INSPIRE is run by a collaboration of CERN, DESY, Fermilab, IHEP, and SLAC, and interacts closely with HEP publishers, arXiv.org, NASA-ADS, PDG, HEPDATA and other information resources.</p>
 
-      <p><span class="paragraph-heading">Background </span>Inspire is a modern day successor of <a href="https://www.slac.stanford.edu/spires/about/">
-        Spires</a> - a 1960s database of particle physics literature curated by Standard Linear Accelerator Center (SLAC) in collaboration
-        with physics institutes around the world. <span class="highlight">In 1991 it became the first website in North America.</span>
-        In May 2007, CERN, DESY, Fermilab and SLAC decided to build the next-generation High Energy Physics (HEP) information 
-        system which would combine the successful SPIRES database content with <a href="http://invenio-software.org/">Invenio</a> digital
-        library technology developed at CERN and thus <a href="">Inspire</a> was born. INSPIRE is run by a collaboration of CERN, DESY, 
-        Fermilab, IHEP, and SLAC, and interacts closely with HEP publishers, arXiv.org, NASA-ADS, PDG, HEPDATA and other information 
-        resources. Aside from </p>
-
-        <figure>
-            <img src="assets/img/old-inspire.jpg" alt="screenshot of the landing page of old inspire">
-            <figcaption>The landing page for now legacy Inspire</figcaption>
-        </figure>
-        
-      <p>When I joined the Inspire team on 1st of September, 2017, it was working on transitioning Inspire into a new and improved
-        web app which provided a ton of new features to its users, including (but not limited to) google style search, author 
-        disambiguation for high-quality profiles and improved search capabilities and faster results. This new application was using
-        Angular 2.0 (and sometimes AngularJS) as a frontend technology framework along with gulp, bootstrap, and jinja.</p>
-        
-       <p>Even though the generated app could indeed support several new features, the developers were quite discontent with both, the quality of code and
-        team efficiency. Therefore, in February 2018 we adopted the Scrum framework to develop and deliver features in iterations and in 
-        April 2018 the frontend engineers decided to build a true SPA using React and Redux for development and state management, Ant design 
-        as the design framework, and Jest, Enzyme, and Puppeteer for testing.</p>
-      
       <figure>
-        <img src="assets/img/cern-topology.jpg" alt="CERN cloud resources topology">
-        <figcaption>The hierarchy of cloud resources at CERN</figcaption>
+        <img src="assets/img/legacy-inspire.jpg" alt="Homepage of old inspire">
+        <figcaption>Homepage of the (old) inspire</figcaption>
+      </figure>
+        
+      <p>When I joined the Inspire team on 1st of September, 2017, it was working on transitioning Inspire into a new and improved web app which provided a ton of new features to its users, including (but not limited to) google style search, author disambiguation for high-quality profiles and improved search capabilities and faster results. This new application was using Angular 2.0 (and sometimes AngularJS) as a frontend technology framework along with gulp, bootstrap, and jinja.</p>
+
+      <figure>
+        <img src="assets/img/old-new-inspire.jpg" alt="Homepage of the new Inspire web app built with ANgular">
+        <figcaption style="text-align: center">Homepage of the (new) Inspire web app built with Angular.<br> The frontend architecture and design is now being re-implemented using React and other tools</figcaption>
       </figure>
 
-      <p><span class="paragraph-heading">Purpose</span> All of the data on the topology of the cloud and the details on all the cloud resources are
-        not available in a single place, being spread in different databases. A topology collector
-        was written which dumps it into a single json file. It is very inefficient, if not impossible to
-        dig through an enormous file every time some information is required. Also, a json file is
-        not the best or the most comprehensible representation of data for humans. <span class="highlight">Therefore, a
-        dashboard that represents the relationship between several cloud components in an easy to
-        understand format was required.</span></p>
-
-      <p><span class="paragraph-heading">Process</span> The proposed solution was to design a dashboard that translates the hierarchy in the data
-        stored in the json file (topo.json) into a graph in which each node would represent a cloud
-        component and every edge would show the relationship that the components share with
-        each other.</p>
-
-      <p>In order to create an effective representation of data <span class="highlight">it is significant to draw a distinction
-        between the exploratory and explanatory data visualization</span>. While working on the
-        exploratory side of visualization it was important to get a sense of what the data is and what it 
-        can convey to its audience (the number, type, status, etc of
-        various cloud components and the relationship they share with each other). This was a
-        process of turning over different rocks to try to find one or two interesting nuggets that the
-        audience would be interested in. Studying these helped me design an initial,
-        rough idea of what the central graph in the dashboard must look like, represent, and
-        highlight.</p>
-            
+      <p>Even though the generated app could indeed support several new features, the developers were quite discontent with both, the quality of code and team efficiency. Therefore, in February 2018 we adopted the Scrum framework to develop and deliver features in iterations and in April 2018 the frontend engineers decided to build a true SPA using <span class="highlight">React and Redux for development and state management, Ant design as the design framework, and Jest, Enzyme, and Puppeteer for testing.</span></p>
+      
       <figure>
-        <img src="assets/img/cern-dashboard-mockup.jpg" alt="CERN cloud resources topology">
-        <figcaption>Sketch for the proposed design of the dashboard</figcaption>
+        <img src="assets/img/new-inspire.jpg" alt="Homepage of the current (new) Inspire">
+        <figcaption>Homepage of the current (new) Inspire</figcaption>
       </figure>
 
-      <p>In the next phase, the explanatory space of data visualization had to be explored. Attention
-        was paid to allow users to explore the data in interesting ways and look at it from different
-        angles, in an unbiased way. In order to do that four key points were considered:</p>
-      
+      <p><span class="paragraph-heading">Team Structure</span> At Inspire, we are a team of a project leader, a project manager (/product owner), a content specialist, a systems engineer, 2 front-end engineers (including myself), 4 back-end engineers, 2 full-stack engineers, 2 data-scientists, and about 5 curators. After adopting the agile software development approach, we split ourselves into 2 smaller, self-organizing and cross-functional teams. I am now a part of 'Exclusive Unicorns' team (we like to give ourselves cheeky names) which comprises of 2 front-end engineers, 3 back-end engineers, and 1 full-stack engineer. Since our team does not have a dedicated UI/UX designer, the project manager and I contribute to the design and user testing phases of the product.</p>
+
+      <p><span class="paragraph-heading">My role and responsibilities</span> Everyday physicists from around the world submit their articles to Inspire. In addition to that, there are other sources from where papers and reports are harvested automatically on a regular basis. A small team of people at Inspire curate these submissions to make sure that the information saved on Inspire databases is useful to the HEP community. Thus, the tools and services provided by Inspire can be categorized into the following 2 groups:
+      </p>
       <ul>
-        <li>Having a really robust understanding of the context - <span class="highlight">The primary audience was
-          identified as the members of the IT team and/or CERN employees or visitors</span> who
-          have prior understanding of cloud technologies and are trying to understand or find
-          out details about the topology of cloud at CERN</li>
-        <li>Choosing an appropriate type of visual - <span class="highlight">A collapsible force-layout graph was
-          chosen</span> as the best option for the representation of the data in topo.json. Allowing
-          the users to zoom into faulty virtual machines was also considered. Simple features
-          like clicking on the nodes to display their details and hovering over them to see
-          their name were decided to be added to the dashboard</li>
-        <li>Removing the clutter - It is a primary design principle to eliminate things that don't
-          add informative value to the visuals. Doing so decreases cognitive load, does not
-          overwhelm the user, and also causes the data to just stand out more</li>
-        <li>Drawing the audience's attention to where we want them to pay it - It was at this
-          point that the strategic decisions about the color, size, and placement of various
-          elements on the page were made. Also, efforts were made to follow principles that
-          make the design comprehensible to a wider audience, for example, mixing and
-          using too much of red and green was avoided to make the visuals easy to read for
-          color-blind people</li>
+        <li>Back-office tools - These are used by the curators to accept, reject, or modify records and solve exceptions that occur during the process of migration of records from the legacy system to the new one.</li>
+        <li>Front-office tools - or the 'User facing services' that are meant for physicists and HEP enthusiasts search for and cite articles.</li>
       </ul>
-      
-      <p><span class="paragraph-heading">Features Added </span>
-        <ul>
-          <li>The collapsible force layout graph was designed by customizing the open-sourced code
-            available at <a href="https://bl.ocks.org/mbostock/1062288">Mike Bostock's (creator of D3.JS) website</a>. Every child node of a particular
-            parent node collapses and merges into its parent when the latter is clicked</li>
-          <li>The users can hover over the nodes to read their name that is displayed in a tool tip, or
-            they can click on them to read their details displayed in the table on the top-right of the
-            dashboard</li>
-          <li>On clicking the 'Zoom into faulty VMs' buttons on the top, a transition that loops
-            endlessly begins focusing on the faulty VMs by zooming into them.</li>
+
+      <p><span class="highlight">As a front-end engineer, I worked on both these groups of tools.</span></p>
+
+      <p><span class="paragraph-heading">Contributions to the front-office tools</span>
+        Conducted user tests and helped in the design and development of the search results page, the 'detailed record page' for HEP literature records, and the author submissions page.
+        <ul class="tech-used-container">Technologies used
+          <li>React</li>
+          <li>Redux</li>
+          <li>Enzyme</li>
+          <li>Jest</li>
+          <li>Puppeteer</li>
+          <li>Docker</li>
         </ul>
       </p>
-      <div class="iframe-wrapper">
-        <iframe width="800" height="430" src="https://www.youtube.com/embed/0knLkiUWzvY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        <blockquote>The feature of zooming into faulty virtual machines was also added</blockquote>
+
+      <div class="image-container">
+        <figure>
+          <img src="assets/img/searchpage-inspire.jpg" alt="Search results page">
+          <figcaption>Search results page</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/img/detail-page-inspire.jpg" alt="Page displaying detailed information on an Inspire record">
+          <figcaption>Page displaying detailed information on an Inspire record</figcaption>
+        </figure>
       </div>
 
-      <p><span class="paragraph-heading">Resources</span>
-        <ul class="resources">
-          <li><a href="https://github.com/Dinika/cernDashboard">GitHub Repo</a></li>
-          <li><a href="https://openlab-archive-phases-iv-v.web.cern.ch/publications/technical_documents/resource-visualization">Project Report</a></li>
-          <li><a href="https://cds.cern.ch/record/2212886">Summer Student Lightning Talk</a></li>
-          <li><a href="https://indico.cern.ch/event/557791/contributions/2269282/attachments/1324576/1987854/RESOURCE_VISUALISATION___Dinika_Saxena.pdf">Project Presentation</a></li>
-        </ul>
-      </p>
+      <p style="margin-top: 5em"><span class="paragraph-heading">Contributions to the back-office tools</span>
+        <ul>
+          <li><span class="paragraph-heading">Exceptions Dashboard</span> I developed, designed, and gathered user requirements for a dashboard that displays and helps resolve exceptions that occur during the migration of records from the legacy system to the new version of Inspire.
+          <ul class="tech-used-container">Technologies used
+            <li>React</li>
+            <li>Redux</li>
+            <li>Enzyme</li>
+            <li>Jest</li>
+            <li>Figma</li>
+          </ul>
+          <figure>
+            <img src="assets/img/exceptions-dashboard.jpg" alt="Exceptions dashboard homepage">
+            <figcaption>The exceptions dashboard</figcaption>
+          </figure>
+          </li>
 
-      <p><span class="paragraph-heading">Award</span> 2nd prize for best project presentation at CERN Lightning Talks Session 2016
+          <li><span class="paragraph-heading">Holdingpen</span> Resolved bugs and added new features to holdingpen which is a tool that helps curators choose if a certain literature, job, or publisher submission should be rejected or accepted (as a core or non-core entry) or matched with an already existing record in the database.
+            <ul class="tech-used-container">Technologies used
+              <li>AngularJs</li>
+              <li>Bootstrap</li>
+            </ul>
+          <div class="image-container">
+            <figure>
+              <img src="assets/img/holdingpen.jpg" alt="Dashboard for the holdingpen">
+              <figcaption>Dashboard for Holdingpen</figcaption>
+            </figure>
+            <figure>
+              <img src="assets/img/holdingpen-searchpage.jpg" alt="Search page for records in the holdingpen">
+              <figcaption>Records in holdingpen waiting for approval from curators</figcaption>
+            </figure>
+          </div>
+          
+          <li><span class="paragraph-heading">Record Editor</span> Resolved bugs and updated user-interface for an editor that helps curators modify records and resolve conflicts.
+            <ul class="tech-used-container">Technologies used
+              <li>Angular 2</li>
+              <li>Bootstrap</li>
+            </ul>
+            <figure>
+              <img src="assets/img/record-editor.jpg" alt="Record editor">
+              <figcaption>Record editor</figcaption>
+            </figure>
+          </li>
+        </ul>
       </p>
 
     </section>

@@ -7,6 +7,7 @@
 
 body
     background: $starkWhite
+    height: 100%
     ::selection
         background: $highlightColor
 
@@ -35,6 +36,7 @@ header
 section
     margin: 10em auto
     width: 60vw
+    height: 100%
     transform: translate3d(0,6em,0)
     animation: fadeIn 3s ease-out forwards
 
@@ -48,9 +50,9 @@ section
         margin: 1em auto
         color: $basicBlack
         line-height: 1.5
-        .paragraph-heading
-            font-size: 1.75rem
-            font-weight: 700
+    .paragraph-heading
+        font-size: 1.75rem
+        font-weight: 700
     .highlight
         background-color: $highlightColor
     .iframe-wrapper
@@ -78,6 +80,12 @@ section
         line-height: 1.5
         &.resources
             list-style: none
+        figcaption
+            font-size: 1rem
+            font-weight: 400
+            color: black
+        figure
+            margin-bottom: 3em
     .image-container
         display: flex
         justify-content: end
@@ -86,6 +94,19 @@ section
         figure
             margin-right: 3em
             max-width: 600px
+    .tech-used-container
+        display: inline-block
+        font-size: 1.5rem
+        margin-bottom: 2em
+        li
+            display: inline-block
+            background: $basicBlack
+            color: white
+            padding: 0.1em 0.4em
+            margin: 0.5em 0.3em
+            border-radius: 10%
+            font-size: 1.25rem    
+
 
 footer
     font-size: 1.25rem
