@@ -82,6 +82,12 @@ if (!document.hidden) {
     }
   }
 
+  if(document.getElementById('get-in-touch')) {
+      document.querySelector('#get-in-touch').addEventListener('click', function() {
+        navigateToSection(4)
+    })
+  }
+
   function navigateToSection(sectionIndex) {
     highlightClickedNavOption(sectionIndex);
     currentSectionDiv = document.getElementById(currentSection.name);
