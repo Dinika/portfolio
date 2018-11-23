@@ -25,7 +25,7 @@ Jekyll, HTML5, SASS, ES6, lines.js, [anime.js](https://github.com/juliangarnier/
 - [ ] Remove unnecessary font-weights from google fonts
 - [ ] Remove jquery
 - [x] Add signature
-- [ ] Update Intro
+- [x] Update Intro
 - [ ] Refactor [functions to navigate to next and previous sections](https://github.com/Dinika/portfolio/blob/master/assets/js/functions.js#L46)
 - [x] Add click handlers to navigation options
 - [x] Link blogs
