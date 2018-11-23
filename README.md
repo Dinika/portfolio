@@ -22,6 +22,7 @@ Jekyll, HTML5, SASS, ES6, lines.js, [anime.js](https://github.com/juliangarnier/
 ## Task Lists :ballot_box_with_check:
 
 - [x] Update Readme.md
+- [x] Add information on burger builder project
 - [ ] Remove unnecessary font-weights from google fonts
 - [ ] Remove jquery
 - [x] Add signature
